@@ -1,11 +1,11 @@
 .custom-container {
   background-color: #fdf1eb;
-  margin-left: 267px;
-  box-sizing: border-box;
+  margin-left: 219px;
+  width: auto;
 }
 
-.row-container {
-  width: auto;
+.row {
+  --bs-gutter-x: 0rem;
 }
 
 .primary-text-header {
@@ -48,7 +48,7 @@
 }
 
 .user-info-email {
-  margin-left: 5px;
+  margin-left: 55px;
 }
 
 .user-image {

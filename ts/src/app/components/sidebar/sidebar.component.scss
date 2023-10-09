@@ -1,0 +1,74 @@
+.container-sidebar {
+  margin: 0;
+  padding-inline-start: 0;
+  width: 220px;
+  height: 100%; /* Ocupa toda a altura da barra lateral */
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra à direita */
+  padding-right: 10px; /* Adiciona algum espaçamento à direita da sombra, ajuste conforme necessário */
+
+}
+.container-top-title{
+  width: 220px;
+
+
+
+}
+
+.title-sidebar {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+
+  text-align: center;
+  padding-top: 16px;
+  height: 75px;
+  background-color: #ffb354;
+
+}
+
+.img-sidebar {
+  width: 220px;
+  height: 258px;
+
+}
+
+.init-side-bar {
+  width: 220px;
+}
+
+.nav-sidebar {
+  background-color: #ffffff;
+}
+
+.list-sidebar {
+  border-bottom: 1 solid black;
+}
+
+.text-sidebar-link {
+  border-bottom: 2px solid #e7e7e7;
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 18.75px;
+  color: #725c5c;
+}
+
+.section-bg-selected-a{
+  width: 5px;
+  height: 37px;
+  background-color: #ffb354;
+
+}
+
+.text-sidebar-selected{
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 18.75px;
+  color: #725c5c;
+
+}
+
+
+.shadow-line {
+  box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+  height: 100vh; /* Ajuste conforme necessário para a altura desejada */
+}
