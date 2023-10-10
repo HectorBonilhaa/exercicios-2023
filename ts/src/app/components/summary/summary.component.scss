@@ -1,0 +1,48 @@
+.summary-container {
+  margin-left: 270px;
+  margin-top: 35px;
+  width: 81.2%;
+  border: 1px solid #ececec;
+  border-radius: 3px;
+  border-color: #ececec;
+}
+
+.card-summary {
+  background-color: #fdf1eb;
+  border-radius: 3px 3px 3px 3px;
+  height: 45px;
+}
+
+.title-card-summary {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  margin-top: 10px;
+  margin-left: 16px;
+}
+.card-summary-content {
+  width: 97.5%;
+  height: 100%;
+  border-radius: 3px;
+  margin-left: 15px;
+  font-size: 14px;
+  line-height: 21.33px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  text-align: justify;
+}
+
+#mais {
+  display: none;
+}
+
+.btn-show-more{
+  font-family: 'Quicksand';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22.75px;
+  color: #ED7839;
+  text-decoration: none;
+  cursor: pointer;
+}

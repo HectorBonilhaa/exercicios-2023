@@ -85,7 +85,11 @@
   letter-spacing: 1px;
 }
 
-.div-card-box{}
+.img-video {
+  width: 783px;
+  height: 439px;
+  border-radius: 3px;
+}
 
 .card-box {
   margin-left: 532px;
@@ -116,14 +120,12 @@
   }
 }
 
-.div-title-card{
-  position: fixed;
+.div-title-card {
   max-width: 237px;
   width: 237px;
   height: 45px;
   border-radius: 3px 3px 0 0;
   background-color: #fdf1eb;
-
 }
 
 .title-box-right {
@@ -132,8 +134,8 @@
   line-height: 25px;
   font-size: 20px;
 
-  padding-top: 10px;
-  padding-left: 16px;
+  margin-top: 10px;
+  margin: 16px;
 }
 
 .card-content-text {
