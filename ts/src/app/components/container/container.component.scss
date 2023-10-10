@@ -1,0 +1,159 @@
+.container-content {
+  margin-left: 270px;
+  margin-top: 20px;
+  height: 100%;
+}
+
+.title-container {
+  font-family: "Roboto";
+  width: 70%;
+  height: 54px;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 25px;
+  color: #ed7839;
+}
+
+.raw-button-right {
+  justify-content: right;
+  width: 100%;
+  margin-bottom: 30px;
+  gap: 10px;
+  margin-right: 90px;
+}
+
+.btn-download {
+  width: 120px;
+  height: 31px;
+  border-radius: 4px;
+  background-color: #ed7839;
+  align-self: center;
+  align-items: center;
+  border: transparent;
+}
+
+.download-img-btn {
+  width: 18px;
+  height: 19px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 9px;
+}
+
+.text-button-download {
+  font-family: "Roboto";
+  width: 72px;
+  font-size: 16px;
+  margin-top: 16px;
+  align-items: center;
+  font-weight: 500;
+  line-height: 18.75px;
+  color: #ffffff;
+}
+
+.btn-favorite-star {
+  width: 43px;
+  height: 31px;
+  background-color: #ed7839;
+  border-radius: 4px;
+  border-color: transparent;
+}
+
+.btn-doi {
+  width: 43px;
+  height: 31px;
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: #ed7839;
+}
+.div-below-btn {
+  width: auto;
+}
+
+.container-below-btn {
+  height: 15px;
+}
+.text-below-btn {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #ed7839;
+  text-align: end;
+  margin-right: 110px;
+  letter-spacing: 1px;
+}
+
+.div-card-box{}
+
+.card-box {
+  margin-left: 532px;
+  width: 100%;
+  max-width: 242px;
+  max-height: 420px; /* Defina a altura máxima conforme necessário */
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  /* Estiliza a barra de rolagem no Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #555555 #dddddd;
+
+  /* Estiliza a barra de rolagem no WebKit (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf; /* Cor do polegar (parte móvel) */
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #e7e7e7; /* Cor da trilha (parte fixa) */
+    border-radius: 5px;
+  }
+}
+
+.div-title-card{
+  position: fixed;
+  max-width: 237px;
+  width: 237px;
+  height: 45px;
+  border-radius: 3px 3px 0 0;
+  background-color: #fdf1eb;
+
+}
+
+.title-box-right {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 20px;
+
+  padding-top: 10px;
+  padding-left: 16px;
+}
+
+.card-content-text {
+  width: 212px;
+}
+
+.text-card {
+  width: 212px;
+
+  font-weight: 400;
+  line-height: 22px;
+  margin-left: 16px;
+  color: #ada0a0;
+  letter-spacing: 0.1px;
+}
+
+.refeerences-text-card {
+  font-weight: 400;
+  line-height: 22px;
+  margin-left: 16px;
+  color: #ada0a0;
+  letter-spacing: 0.1px;
+}
