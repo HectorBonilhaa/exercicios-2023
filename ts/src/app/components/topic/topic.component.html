@@ -2,30 +2,69 @@
   <div class="card card-topic">
     <h4 class="h4 title-card-topic">Discussões</h4>
   </div>
-  <div class="raw card-topic-content">
+  <div class="raw card-topic-content" *ngIf="!mostrarFormulario">
     <h6 class="h6 card-topic-content-title">
       Compartilhe suas ideias ou dúvidas com os autores!
     </h6>
   </div>
-  <div class="raw raw-topic-img">
+  <div class="raw raw-topic-img" *ngIf="!mostrarFormulario">
     <img class="img-fluid card-topic-img" src="../../../assets/icone1.png" />
     <img class="img-fluid card-topic-img" src="../../../assets/icone2.png" />
     <img class="img-fluid card-topic-img" src="../../../assets/icone3.png" />
   </div>
-  <div class="raw raw-bellow-img">
+  <div class="raw raw-bellow-img" *ngIf="!mostrarFormulario">
     <p class="p text-bellow-img">
       Sabia que o maior estímulo no desenvolvimento científico e cultural é a
       curiosidade? <br />
       Deixe seus questionamentos ou sugestões para o autor!
     </p>
   </div>
-  <div class="raw card-btn-topic">
-    <button class="button btn-topic d-flex">
+  <div class="raw card-btn-topic" *ngIf="!mostrarFormulario">
+    <button class="button btn-topic d-flex" (click)="mostrarCampoFormulario()">
       <img class="img img-btn-add" src="../../../assets/icon - criar.png" />
       <p class="p text-btn-topic">criar tópico</p>
     </button>
   </div>
-  <div class="card card-comment">
+
+  <div class="raw" id="content-container" *ngIf="mostrarFormulario && !mostrarFormularioRespondido">
+    <p class="text-suggestion-topic">Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+    <div class="raw">
+      <p class="text-topic-label"> Assunto</p>
+      <form class="form">
+        <input [(ngModel)]="assunto" class="input-text-topic" type="text" id="topic" name="assunto" placeholder="Defina um tópico sucinto para notificar os autores..." />
+      </form>
+      <div class="raw raw-text-area">
+        <p class="text-topic-label">Conteúdo</p>
+        <textarea class="text-area-input" [(ngModel)]="conteudo"></textarea>
+      </div>
+      <div class="raw raw-btn-send">
+        <button class="btn-primary" (click)="enviarFormulario(); mostrarCampoFormularioRespondido()">
+          <p class="text-send-btn">Enviar</p>
+        </button>
+      </div>
+      <div class="raw line-card-separator"></div>
+    </div>
+  </div>
+
+
+  <div class="raw raw-response-topic" *ngIf="mostrarFormularioRespondido">
+    <p class="title-response-topic">Seu tópico foi enviado com sucesso! :D</p>
+
+    <div class="raw raw-subtitle-response-topic">
+      <p class="subtitle-response-topic">Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+    </div>
+    <div class="raw raw-anchor-topic">
+      <a href="" class="anchor-response-topic">Descubra outros trabalhos!</a>
+    </div>
+    <div class="raw card-btn-new-topic">
+      <button class="btn-new-topic d-flex" (click)="mostrarFormulario; mostrarFormularioRespondido =false">
+        <p class="p text-btn-new-topic">criar novo tópico</p>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="card card-comment position-relative" *ngIf="mostrarFormularioRespondido">
     <h6 class="h6 subject-card-comment">Assunto da pergunta aparece aqui</h6>
     <p class="p name-card-comment">Hector de Oliveira</p>
 
@@ -54,8 +93,60 @@
       <p class="p number-likes-comments">1 like</p>
       <p class="p number-likes-comments">1 resposta</p>
     </div>
+
+
+    <!-- Elemento para adicionar texto com blur -->
+  <div class="card-comment-overlay col-md-2">
+    <div class="raw">
+      <img class="img-fluid img-feedback-overlay" src="../../../assets/feedback.png"/>
+
+    </div>
+    <div class="raw">
+      <h3 class="overlay-text">Aguardando feedback dos autores</h3>
+      <a href="#" class="overlay-anchor">Editar tópico</a>
+
+    </div>
   </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <div *ngFor="let card of cards">
   <div class="card card-comment">
+    <h6 class="h6 subject-card-comment">{{card.assunto}}</h6>
+    <p class="p name-card-comment">Hector de Oliveira</p>
+
+    <div class="raw ml-auto raw-text-comment">
+      <p class="p text-content-comment-card">{{card.conteudo}}
+      </p>
+    </div>
+    <div class="raw d-flex raw-footer-comments">
+      <button class="button btn-more-info">
+        <img
+          class="img-fluid img-more-info"
+          src="../../../assets/mais informações.png"
+        />
+      </button>
+      <button class="button btn-like-comments">
+        <img
+          class="img-fluid like-btn-comments"
+          src="../../../assets/green apples 22.png"
+        />
+      </button>
+      <p class="p number-likes-comments">{{card.likes}} like</p>
+      <p class="p number-likes-comments"> {{card.resposta}} respostas</p>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="card  card-comment">
     <h6 class="h6 subject-card-comment">Assunto da pergunta aparece aqui</h6>
     <p class="p name-card-comment">Hector de Oliveira</p>
 
@@ -82,8 +173,78 @@
         />
       </button>
       <p class="p number-likes-comments">1 like</p>
-      <p class="p number-likes-comments">1 resposta</p>
+      <a href="#" class="anchor-likes-comments"  (click)="mostrarCamposCard($event)"  >4 respostas</a>
+    </div>
+
+
+
+
+    <div *ngIf="mostrarCard">
+
+
+    <div class="raw raw-answer-comment">
+      <div class="raw d-flex" >
+        <p class="name-author-aswered-comment">Adriano da Silva</p>
+
+        <p class="rule-text">Autor</p>
+        <img class="img-fluid img-check-answer" src="../../../assets/orangecheck.png"/>
+
+      </div>
+
+        <div class="raw text-content-answer-card">
+          <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+        </div>
+    </div>
+
+
+    <div class="raw raw-answer-comment bg-transparent">
+      <div class="raw d-flex" >
+        <p class="name-author-aswered-comment">Carlos Henrique Santos</p>
+
+      </div>
+        <div class="raw text-content-answer-card">
+          <p>Consegui entender melhor agora! Parece que a variação da análise da dimensão e impacto de processo formativo situado impacto de processo formativo.
+
+           <br><br> Obrigado pela resposta, muito interessante o seu trabalho! </p>
+        </div>
+
+    </div>
+    <div class="raw raw-answer-comment">
+      <div class="raw d-flex" >
+        <p class="name-author-aswered-comment">Camila Ferreira Andrade</p>
+
+        <p class="rule-text">Coautor</p>
+        <img class="img-fluid img-check-answer" src="../../../assets/orangecheck.png"/>
+
+      </div>
+
+        <div class="raw text-content-answer-card">
+          <p>Também ínteressante lembrar que o relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.
+
+            Situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+        </div>
+
+      </div>
+      <div class="raw raw-answer-comment">
+        <div class="raw d-flex" >
+          <p class="name-author-aswered-comment">Ana Carolina</p>
+
+          <p class="rule-text">Coautor</p>
+          <img class="img-fluid img-check-answer" src="../../../assets/orangecheck.png"/>
+
+        </div>
+
+          <div class="raw text-content-answer-card">
+            <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+          </div>
     </div>
   </div>
+
+
+</div>
+
+
+
+
   <div class="raw d-flex spacer"></div>
 </div>

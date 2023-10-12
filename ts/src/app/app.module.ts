@@ -8,6 +8,7 @@ import { ContainerComponent } from './components/container/container.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { TopicComponent } from './components/topic/topic.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,10 @@ import { FooterComponent } from './components/footer/footer.component';
     ContainerComponent,
     SummaryComponent,
     TopicComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
