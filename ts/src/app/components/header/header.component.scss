@@ -13,6 +13,7 @@
   color: #725c5c;
   margin-top: 5px;
   margin-left: 36px;
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 14px;
   line-height: 16.41px;
@@ -20,23 +21,41 @@
 
 .title-header {
   margin-left: 36px;
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 22px;
-  color: #725c5c;
   line-height: 25.78px;
+  color: #725c5c;
 }
 
 .subtitle-header {
   margin-left: 36px;
+  font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
   line-height: 16.41px;
   color: #725c5c;
 }
 
+.btn-outline-secondary{
+  width: 97px;
+  height: 34px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
 .img-fluid {
   margin-bottom: 4px;
   gap: 1px;
+  margin-top: 1px;
+}
+
+.text-button-language{
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.5px;
 }
 
 .user-info {
@@ -45,10 +64,20 @@
 
 .text-msg-login {
   text-align: end;
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.5px;
+  color: #333333;
 }
 
 .user-info-email {
   margin-left: 55px;
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #333333;
 }
 
 .user-image {

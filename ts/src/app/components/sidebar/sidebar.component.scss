@@ -1,3 +1,4 @@
+
 .container-sidebar {
   margin: 0;
   padding-inline-start: 0;
@@ -15,14 +16,17 @@
 }
 
 .title-sidebar {
+  font-family: 'Roboto';
   font-size: 30px;
   font-weight: 700;
-  color: white;
+  line-height: 35.16px;
+  color: #FFFFFF;
 
   text-align: center;
   padding-top: 16px;
+  padding-right: 4px;
   height: 75px;
-  background-color: #ffb354;
+  background-image: linear-gradient(#FFB354, #EE7A3A);
 
 }
 
@@ -46,6 +50,8 @@
 
 .text-sidebar-link {
   border-bottom: 2px solid #e7e7e7;
+  font-family: 'Quicksand';
+  font-weight: 500;
   padding-left: 24px;
   font-size: 15px;
   line-height: 18.75px;
@@ -55,12 +61,14 @@
 .section-bg-selected-a{
   width: 5px;
   height: 37px;
-  background-color: #ffb354;
-
+  background-image: linear-gradient(#FFB455, #ED7839);
 }
 
 .text-sidebar-selected{
   padding-left: 24px;
+  padding-top: 11px;
+  font-family: 'Quicksand';
+  font-weight: 500;
   font-size: 15px;
   line-height: 18.75px;
   color: #725c5c;
