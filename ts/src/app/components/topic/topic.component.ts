@@ -22,7 +22,7 @@ export class TopicComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    // Recupere os dados salvos em localStorage durante a inicialização
+    // Constante para recuperar os dados salvos em localStorage durante a inicialização
     const savedCards = localStorage.getItem('savedCards');
     if (savedCards) {
       this.cards = JSON.parse(savedCards);
@@ -38,9 +38,8 @@ export class TopicComponent implements OnInit {
   }
 
   mostrarCamposCard(event: MouseEvent) {
-    this.mostrarCard = !this.mostrarCard
+    this.mostrarCard = !this.mostrarCard;
     event.preventDefault();
-
   }
 
   enviarFormulario() {
@@ -48,22 +47,24 @@ export class TopicComponent implements OnInit {
     const novoCard = {
       assunto: this.assunto,
       conteudo: this.conteudo,
-      likes: Math.floor(Math.random() * 50) + 2, // Número aleatório entre 1 e 50
-      resposta: Math.floor(Math.random() * 50) + 2, // Número aleatório entre 1 e 50
+
+      // Número aleatório entre 1 e 50
+      likes: Math.floor(Math.random() * 50) + 2,
+      resposta: Math.floor(Math.random() * 50) + 2,
     };
 
     this.cards.push(novoCard);
 
-    // Salve os dados no localStorage
+    // Salvando os dados no localStorage
     localStorage.setItem('savedCards', JSON.stringify(this.cards));
 
-    // Inverta a ordem dos cards para mostrar o último primeiro
+    // Ordenando a exibição dos cards para do último criado até o card que está mockado.
     this.cards.reverse();
 
-    // Após o envio, exiba os cards
+    // Exibir o card após o envio
     this.mostrarCard = true;
 
-    // Limpe os campos do formulário, se necessário
+    // Gerando o valor dos inputs para null
     this.assunto = '';
     this.conteudo = '';
   }

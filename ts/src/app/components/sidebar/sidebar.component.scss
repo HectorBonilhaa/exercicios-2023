@@ -1,39 +1,32 @@
-
 .container-sidebar {
   margin: 0;
   padding-inline-start: 0;
   width: 220px;
-  height: 100%; /* Ocupa toda a altura da barra lateral */
-  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra à direita */
-  padding-right: 10px; /* Adiciona algum espaçamento à direita da sombra, ajuste conforme necessário */
-
+  height: 100%;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+  padding-right: 10px;
 }
-.container-top-title{
+.container-top-title {
   width: 220px;
-
-
-
 }
 
 .title-sidebar {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 30px;
   font-weight: 700;
   line-height: 35.16px;
-  color: #FFFFFF;
+  color: #ffffff;
 
   text-align: center;
   padding-top: 16px;
   padding-right: 4px;
   height: 75px;
-  background-image: linear-gradient(#FFB354, #EE7A3A);
-
+  background-image: linear-gradient(#ffb354, #ee7a3a);
 }
 
 .img-sidebar {
   width: 220px;
   height: 258px;
-
 }
 
 .init-side-bar {
@@ -50,7 +43,7 @@
 
 .text-sidebar-link {
   border-bottom: 2px solid #e7e7e7;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-weight: 500;
   padding-left: 24px;
   font-size: 15px;
@@ -58,25 +51,23 @@
   color: #725c5c;
 }
 
-.section-bg-selected-a{
+.section-bg-selected-a {
   width: 5px;
   height: 37px;
-  background-image: linear-gradient(#FFB455, #ED7839);
+  background-image: linear-gradient(#ffb455, #ed7839);
 }
 
-.text-sidebar-selected{
+.text-sidebar-selected {
   padding-left: 24px;
   padding-top: 11px;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-weight: 500;
   font-size: 15px;
   line-height: 18.75px;
   color: #725c5c;
-
 }
-
 
 .shadow-line {
   box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
-  height: 100vh; /* Ajuste conforme necessário para a altura desejada */
+  height: 100vh;
 }
